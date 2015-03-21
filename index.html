@@ -1,0 +1,27 @@
+{% extends "_base.html" %}
+
+{# CSS styles #}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+{% endblock css %}
+
+{# Content #}
+{% block content %}
+<div class="gallery">
+  {% for slide in slides %}
+  <div class="gallery-cell{% if extra_class %} {{ extra_class }}{% endif %}"{% if slide.background_image %} style="background-image: url('{{ slide.background_image }}');"{% endif %}>
+    <div class="content-wrapper">
+      <div class="content">
+        <h1>{{ slide.headline|safe }}</h1>
+        {{ slide.text|safe }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}
+
+{# Javascript #}
+{% block scripts %}
+<script src="js/app.js"></script>
+{% endblock %}
