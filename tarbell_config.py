@@ -17,7 +17,7 @@ EXCLUDES = ["*.md", "requirements.txt"]
 # CREATE_JSON = True
 
 # Get context from a local file or URL. This file can be a CSV or Excel
-# spreadsheet file. Relative, absolute, and remote (http/https) paths can be 
+# spreadsheet file. Relative, absolute, and remote (http/https) paths can be
 # used.
 # CONTEXT_SOURCE_FILE = ""
 

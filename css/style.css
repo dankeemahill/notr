@@ -3,3 +3,7 @@ body {
   color: #fff;
 }
 
+input {
+  color: #333;
+  font-weight: bold;
+}
