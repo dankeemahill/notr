@@ -20,11 +20,11 @@
               <button class="btn btn-lg">No</button>
             </div>
           {% endif %}
-          {% if slide.extra_class == "badge" %}
-            {% include 'badge.html' %}
-          {% endif %}
-          {% if slide.extra_class == "cars" %}
+          {% if slide.extra_class == "data" %}
             <img src="{{ slide.data_viz }}" class="data-viz">
+          {% endif %}
+          {% if slide.extra_class == "quote" %}
+            <img src="{{ slide.data_viz }}">
           {% endif %}
         </div>
       </div>
