@@ -18,7 +18,12 @@ var onDocumentReady = function() {
 
 var initButtonEvent = function() {
   $('.decision-btn button').on('click', function() {
-    $gallery.flickity('next', true);
+    $(this).css('color', '#333');
+    var responseText = $('#' + $(this).attr('data-response'))[0].innerHTML;
+    $(this).parent()
+      .parent()
+      .append(responseText);
+    $('button', $(this).parent()).off()
   });
 }
 
