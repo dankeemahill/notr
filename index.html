@@ -9,11 +9,16 @@
 {% block content %}
 <div class="gallery">
   {% for slide in slides %}
-  <div class="gallery-cell{% if extra_class %} {{ extra_class }}{% endif %}"{% if slide.background_image %} style="background-image: url('{{ slide.background_image }}');"{% endif %}>
+  <div class="gallery-cell "{% if slide.background_image %} style="background-image: url('{{ slide.background_image }}');"{% endif %}>
     <div class="content-wrapper">
       <div class="content">
-        <h1>{{ slide.headline|safe }}</h1>
-        {{ slide.text|safe }}
+        <h3>{{ slide.text|safe }}</h3>
+        {% if slide.decision %}
+          <div class="decision-btn">
+            <button class="btn btn-lg">Yes</button>
+            <button class="btn btn-lg">No</button>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>

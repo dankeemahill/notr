@@ -9,8 +9,17 @@ var onDocumentReady = function() {
   $gallery.flickity({
     "pageDots": false,
     "accessibility": true,
-    "setGallerySize": false
+    "setGallerySize": false,
+    "draggable": false
   }).focus();
+
+  initButtonEvent();
+}
+
+var initButtonEvent = function() {
+  $('.decision-btn button').on('click', function() {
+    $gallery.flickity('next', true);
+  });
 }
 
 $(document).ready(onDocumentReady);
