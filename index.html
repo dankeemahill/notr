@@ -12,6 +12,9 @@
   <div class="gallery-cell"{% if slide.background_image %} style="background-image: url('{{ slide.background_image }}');"{% endif %}>
     <div class="content-outer-wrapper">
       <div class="content-wrapper">
+      {% if slide.extra_class == "intro" %}
+        <h1 id="intro-title">NO TIMELY RESPONSE</h1>
+      {% endif %}
         <div class="content">
           <h3 class="{{ slide.extra_class }}">{{ slide.text|safe }}</h3>
           {% if slide.decision %}
