@@ -23,6 +23,9 @@
           {% if slide.extra_class == "badge" %}
             {% include 'badge.html' %}
           {% endif %}
+          {% if slide.extra_class == "cars" %}
+            <img src="{{ slide.data_viz }}" class="data-viz">
+          {% endif %}
         </div>
       </div>
     </div>

@@ -7,3 +7,8 @@ input {
   color: #333;
   font-weight: bold;
 }
+
+.data-viz {
+  max-width: 1000px;
+  width: 80%;
+}
