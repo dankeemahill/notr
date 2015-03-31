@@ -32,12 +32,18 @@ var onDocumentReady = function() {
 
 var initButtonEvent = function() {
   $('.decision-btn button').on('click', function() {
-    $(this).css('color', '#333');
+    var content = $(this).parent().parent();
+
     var responseText = $('#' + $(this).attr('data-response'))[0].innerHTML;
-    $(this).parent()
-      .parent()
-      .append(responseText);
-    $('button', $(this).parent()).off();
+    responseText = $(responseText).attr('class', 'response-text');
+
+    // Remove response text if making second decision
+    if ($('.response-text', content).length) {
+      $('.response-text', content).remove();
+    }
+
+    content.append(responseText);
+
     $('.flickity-prev-next-button').show();
   });
 }
