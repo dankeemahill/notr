@@ -1,0 +1,10 @@
+ipython
+pyzmq
+jinja2
+tornado
+
+numpy
+pandas
+matplotlib
+
+dataset
