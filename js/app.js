@@ -1,14 +1,11 @@
 // Cache jQuery references
 var $gallery = null;
 var flkty = null;
-var decisionSlides = null;
 
 
 var onDocumentReady = function() {
   // jQuery references
   $gallery = $('.gallery');
-
-  decisionSlides = [3, 9];
 
   // Initialize
   $gallery.flickity({
@@ -20,11 +17,21 @@ var onDocumentReady = function() {
 
   flkty = $gallery.data('flickity');
 
-  // Hide flickity buttons on decision slides
   $gallery.on('cellSelect', function() {
-    if (decisionSlides.indexOf(flkty.selectedIndex) !== -1) {
-      $('.flickity-prev-next-button').hide();
-    };
+    var flickIndex = flkty.selectedIndex;
+
+    switch (flickIndex) {
+      case 2:
+      case 4:
+        // Autoplay videos on video slides
+        $('video', $('.content')[flickIndex])[0].play();
+        break;
+      case 3:
+      case 9:
+        // Hide flickity buttons on decision slides
+        $('.flickity-prev-next-button').hide();
+        break;
+    }
   });
 
   initButtonEvent();
