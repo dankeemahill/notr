@@ -1,1 +1,1 @@
-View analysis on [nbviewer](http://nbviewer.ipython.org/github/danhillreports/notr/blob/master/data/analysis.ipynb).
+Information presented in [No Timely Response](http://notr.s3-us-west-2.amazonaws.com/index.html) come from analysis of Arizona Highway Patrol traffic stop data. The python [notebook](https://github.com/danhillreports/notr/blob/master/data/analysis.ipynb) contains this analysis. The data were first reported in an Arizona Daily Star [series](http://tucson.com/special-section/sb1070/) on enforcement of SB 1070.
