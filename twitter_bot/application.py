@@ -115,7 +115,7 @@ class NotrStreamer(TwythonStreamer):
                 uda_disp=uda_disp
             )
 
-        if len(txt) > 140:
+        if len(txt) > 120:
             txt = "@{screen_name} {prefix} {car} for {reason}.".format(
                 prefix=prefix,
                 screen_name=screen_name,
